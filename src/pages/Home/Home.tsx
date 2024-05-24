@@ -7,9 +7,9 @@ import Transition from '../../components/Transition';
 // REACT ICONS
 import { FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
 // IMGAGENS
-import Home_img from "../../../public/imgs/andre-avatar.jpg"
+import Home_img from "../../../public/imgs/levelUpLogo.png"
 // PARTICLES
-import ParticlesBackground from '../../components/ParticlesBackground';
+//import ParticlesBackground from '../../components/ParticlesBackground';
 // FRAMER MOTION
 import { motion } from "framer-motion";
 
@@ -18,16 +18,18 @@ const Home = () => {
         <>
             <Transition onAnimationComplete={() => { }} >
                 <section className={styles.home}>
+
                     <div className={styles.home_content}>
-                        <ParticlesBackground />
+                        
 
-                        <h3 className={styles.first_h3}>Inovando a cada <span>Byte</span></h3>
 
-                        <h1 className={styles.animate_h1}>André Luiz</h1>
+                        <h1 className={styles.animate_h1}>Level UP</h1>
 
-                        <div className={styles.transparent_text}>
-                            <h3 className={styles.animation_text}>Developer Full Stack</h3>
-                        </div>
+                        {/* <div className={styles.transparent_text}>
+                            <h3 className={styles.animation_text}>DESVENDE A MASMORRA</h3>
+                        </div> */}
+                        <h3 className={styles.first_h3}>DESVENDE A MASMORRA</h3>
+                        <h3 className={styles.first_h3}>DO MERCADO DE  <span>TRABALHO</span></h3>
 
                         <div className={styles.social_media}>
                             <motion.div

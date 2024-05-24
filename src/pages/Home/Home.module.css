@@ -4,11 +4,15 @@
     justify-content: space-between;
     min-height: 100vh;
     padding: 10rem 6% 2rem;
+    
 }
 
 .home_content {
     height: 30rem;
+
 }
+
+
 
 @keyframes animate {
     from {
@@ -203,7 +207,6 @@
 }
 
 .home_img {
-    bottom: -17rem;
     position: relative;
     position: fixed;
     right: 10rem;
@@ -212,7 +215,9 @@
 .home_img img {
     object-fit: cover;
     width: 40vw;
-    z-index: 2;   
+    z-index: 2;  
+    box-shadow: 0px 0px 150px 5px rgba(255, 255, 255, 0.7); /* Deslocamento horizontal, Deslocamento vertical, Desfoque, Espalhamento, Cor */
+    //border-radius: 50%;
 }
 
 /* <========== breakpoints ==========> */

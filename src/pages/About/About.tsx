@@ -3,7 +3,7 @@ import styles from "./About.module.css"
 // COMPONENT
 import Transition from "../../components/Transition";
 // IMGAGENS
-import About_img from "../../../public/imgs/andre-avatar.jpg";
+import About_img from "../../../public/imgs/levelUpLogo.png";
 // FRAMER MOTION
 import { motion } from "framer-motion";
 // REACT ICONS
@@ -21,6 +21,7 @@ import {
   BiLogoVisualStudio,
   BiLogoBootstrap
 } from "react-icons/bi";
+import ParticlesBackground from "../../components/ParticlesBackground";
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -46,6 +47,7 @@ const About = () => {
   return (
     <Transition onAnimationComplete={() => { }}>
       <section className={styles.about}>
+      <ParticlesBackground />
         <div className={styles.container_img_skills}>
           <motion.div
             initial={{ opacity: 0, y: "80%" }}
@@ -56,7 +58,7 @@ const About = () => {
               ease: [0.3, 0, 0.2, 1]
             }}
           >
-            <img src={About_img} alt="about_img" />
+            <img className={styles.about_img} src={About_img} alt="about_img" />
           </motion.div>
 
           <div className={styles.skills}>
