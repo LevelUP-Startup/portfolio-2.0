@@ -1,16 +1,15 @@
-
-import { useState } from "react"
+import { useState } from 'react'
 
 export const useResponsiveNavbar = () => {
-    const [showMenu, setShowMenu] = useState(false)
+  const [showMenu, setShowMenu] = useState(false)
 
-    const handleClickButton = () => {
-        setShowMenu(!showMenu);
-    };
+  const handleClickButton = () => {
+    setShowMenu(!showMenu)
+  }
 
-    const handleLinkClick = () => {
-        setShowMenu(false);
-    };
+  const handleLinkClick = () => {
+    setShowMenu(false)
+  }
 
-    return { handleClickButton, handleLinkClick, showMenu };
-};
+  return { handleClickButton, handleLinkClick, showMenu }
+}

@@ -1,15 +1,15 @@
 // CSS
-import styles from "./About.module.css"
+import styles from './About.module.css'
 // COMPONENT
-import Transition from "../../components/Transition";
+import Transition from '../../components/Transition'
 // IMGAGENS
-import About_img from "../../../public/imgs/levelUpLogo.png";
+import AboutImg from '../../../public/imgs/levelUpLogo.png'
 // FRAMER MOTION
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion'
 // REACT ICONS
-import { FaGitAlt } from "react-icons/fa6";
-import { GrMysql } from "react-icons/gr";
-import { SiCanva } from "react-icons/si";
+import { FaGitAlt } from 'react-icons/fa6'
+import { GrMysql } from 'react-icons/gr'
+import { SiCanva } from 'react-icons/si'
 import {
   BiLogoTypescript,
   BiLogoReact,
@@ -19,9 +19,8 @@ import {
   BiLogoFirebase,
   BiLogoRedux,
   BiLogoVisualStudio,
-  BiLogoBootstrap
-} from "react-icons/bi";
-import ParticlesBackground from "../../components/ParticlesBackground";
+  BiLogoBootstrap,
+} from 'react-icons/bi'
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -30,35 +29,34 @@ const container = {
     scale: 1,
     transition: {
       delayChildren: 0.5,
-      staggerChildren: 0.2
-    }
-  }
-};
+      staggerChildren: 0.2,
+    },
+  },
+}
 
 const item = {
   hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,
-    opacity: 1
-  }
-};
+    opacity: 1,
+  },
+}
 
 const About = () => {
   return (
-    <Transition onAnimationComplete={() => { }}>
+    <Transition onAnimationComplete={() => {}}>
       <section className={styles.about}>
-      <ParticlesBackground />
         <div className={styles.container_img_skills}>
           <motion.div
-            initial={{ opacity: 0, y: "80%" }}
-            animate={{ opacity: 1, y: "0%" }}
+            initial={{ opacity: 0, y: '80%' }}
+            animate={{ opacity: 1, y: '0%' }}
             transition={{
               duration: 2,
               delay: 0.3,
-              ease: [0.3, 0, 0.2, 1]
+              ease: [0.3, 0, 0.2, 1],
             }}
           >
-            <img className={styles.about_img} src={About_img} alt="about_img" />
+            <img className={styles.about_img} src={AboutImg} alt="about_img" />
           </motion.div>
 
           <div className={styles.skills}>
@@ -68,7 +66,7 @@ const About = () => {
               transition={{
                 duration: 1,
                 delay: 0.6,
-                ease: [0.2, 0, 0.2, 1]
+                ease: [0.2, 0, 0.2, 1],
               }}
             >
               <h3>
@@ -146,29 +144,36 @@ const About = () => {
         </div>
 
         <div>
-          <motion.div className={styles.about_content}
+          <motion.div
+            className={styles.about_content}
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
               duration: 1,
               delay: 0.6,
-              ease: [0.2, 0, 0.2, 1]
+              ease: [0.2, 0, 0.2, 1],
             }}
           >
-            <h2><span>//</span> Quem é <span>André Luiz</span></h2>
+            <h2>
+              <span>//</span> Quem é <span>André Luiz</span>
+            </h2>
 
             <p>
-              - Olá!
-
-Eu sou o André Luíz, um apaixonado por programação e desenvolvimento de soluções inovadoras. Com habilidades sólidas em JavaScript, TypeScript, ReactJS, React Native, NextJS e NodeJS, tenho experiência FullStack e utilizo metodologias ágeis como Scrum e Kanban.
-
-Ao longo da minha carreira, aprimorei meu conhecimento em Css-in-JS (Stitches, Styled-Components) e adquiri familiaridade com tecnologias como REST, SOLID, arquitetura MVC, Docker, MonoRepo e TurboRepo. Além disso, possuo noções de Python, Java, TDD e BDD.
+              - Olá! Eu sou o André Luíz, um apaixonado por programação e
+              desenvolvimento de soluções inovadoras. Com habilidades sólidas em
+              JavaScript, TypeScript, ReactJS, React Native, NextJS e NodeJS,
+              tenho experiência FullStack e utilizo metodologias ágeis como
+              Scrum e Kanban. Ao longo da minha carreira, aprimorei meu
+              conhecimento em Css-in-JS (Stitches, Styled-Components) e adquiri
+              familiaridade com tecnologias como REST, SOLID, arquitetura MVC,
+              Docker, MonoRepo e TurboRepo. Além disso, possuo noções de Python,
+              Java, TDD e BDD.
             </p>
           </motion.div>
         </div>
       </section>
     </Transition>
-  );
-};
+  )
+}
 
-export default About;
+export default About

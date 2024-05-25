@@ -1,99 +1,78 @@
 // CSS
-import "./Portfolio.css"
-import styles from "./Portfolio.module.css"
-// HOOKS 
-import { useState, useEffect, useRef } from "react";
+import './Portfolio.css'
+import styles from './Portfolio.module.css'
+// HOOKS
+import { useState, useEffect, useRef } from 'react'
 // REACT ROUTER DOM
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom'
 // COMPONENT
-import Transition from "../../components/Transition";
+import Transition from '../../components/Transition'
 // SWIPER
-import { Swiper, SwiperSlide } from "swiper/react"
-import { EffectCoverflow } from "swiper/modules";
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { EffectCoverflow } from 'swiper/modules'
 // IMGAGENS
-import Portfolio_img0 from "../../../public/imgs/project_0.png"
-import Portfolio_img1 from "../../../public/imgs/project_1.png"
-import Portfolio_img2 from "../../../public/imgs/project_2.png"
+import NayImg from '../../../public/imgs/nay.jpeg'
 
-const Portfolio = () => {
-  const [slidePerview, setSlidePerview] = useState<number>(3);
+const Equipe = () => {
+  const [slidePerview, setSlidePerview] = useState<number>(3)
   const [initialSlide] = useState<number>(1)
-  const [transitionCompleted, setTransitionCompleted] = useState(false);
+  const [transitionCompleted, setTransitionCompleted] = useState(false)
 
   const data = [
     {
       id: 0,
-      image: Portfolio_img1,
-      name: "Secret World",
-      description: "Este é um projeto de um jogo de palavras secretas construído em React com Vite e TypeScript. Consiste em adivinhar palavras por meio de pistas com um número limitado de tentativas onde as letras corretas serão exibidas nos painéis e as erradas em uma lista ganhando e somando pontos a cada palavra adivinhada",
-      technologies: [
-        "React",
-        "Hooks",
-        "Typescript",
-        "Javascript",
-        "CSS",
-        "HTML",
-      ],
-      linkDeploy: "#",
-      linkRepository: "#",
+      image: NayImg,
+      name: 'Nay',
+      description: 'Colocar a descricao aki',
+      technologies: ['Adminstração', 'programacão', 'Direito'],
+      linkDeploy: '#',
+      linkRepository: '#',
     },
-
     {
-      id: 1,
-      image: Portfolio_img0,
-      name: "Music Blog",
-      description: "Este é um projeto pessoal, uma aplicação web construída com React, integrada ao Firebase para criar, editar e visualizar Posts. O objetivo é criar Posts falando de música em geral, aproveitei para iniciar o Blog postando sobre algumas de minhas bandas favoritas, mais sinta-se a vontade para postar sobre qualquer estilo musical!",
-      technologies: [
-        "React",
-        "React Router Dom",
-        "Context API",
-        "Typescript",
-        "Javascript",
-        "CSS",
-        "HTML",
-        "Firebase",
-      ],
-      linkDeploy: "#",
-      linkRepository: "#",
+      id: 0,
+      image: NayImg,
+      name: 'Nay',
+      description: 'Colocar a descricao aki',
+      technologies: ['Adminstração', 'programacão', 'Direito'],
+      linkDeploy: '#',
+      linkRepository: '#',
     },
-
     {
-      id: 2,
-      image: Portfolio_img2,
-      name: "Rede Social feita com ReactJS",
-      description: "Projeto em produção, estou me desafiando em fazer uma Rede social utilizando ReactJs e outras tecnologias, Trabalhando para que logo esteja disponível por aqui!",
-      technologies: [
-        "XXX",
-        "XXX",
-        "XXX",
-      ],
-      linkRepository: "https://github.com/adventureandre",
+      id: 0,
+      image: NayImg,
+      name: 'Nay',
+      description: 'Colocar a descricao aki',
+      technologies: ['Adminstração', 'programacão', 'Direito'],
+      linkDeploy: '#',
+      linkRepository: '#',
     },
-  ];
+  ]
 
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth < 580) {
-        setSlidePerview(1);
+        setSlidePerview(1)
       } else {
-        setSlidePerview(3);
+        setSlidePerview(3)
       }
     }
 
-    handleResize();
+    handleResize()
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize)
 
     return () => {
-      window.removeEventListener("resize", handleResize)
+      window.removeEventListener('resize', handleResize)
     }
-  });
+  })
 
   return (
     <Transition onAnimationComplete={() => setTransitionCompleted(true)}>
       {transitionCompleted && (
         <section className={styles.portfolio}>
-          <h2 className={styles.heading}><span>//</span> Principais <span>Projetos</span></h2>
+          <h2 className={styles.heading}>
+            <span>//</span> Equipe <span>Level UP</span>
+          </h2>
 
           <Swiper
             className="animation-cards"
@@ -108,17 +87,16 @@ const Portfolio = () => {
               depth: 100,
               modifier: 2.5,
             }}
-
             slidesPerView={slidePerview}
             pagination={{ clickable: true }}
             navigation
             initialSlide={initialSlide}
           >
             {data.map((item) => (
-              <SwiperSlide key={item.id} className="teste" >
-
+              <SwiperSlide key={item.id} className="teste">
                 <div className={styles.portfolio_container}>
-                  <img src={item.image}
+                  <img
+                    src={item.image}
                     alt={item.name}
                     className={styles.item_slide}
                   />
@@ -127,24 +105,25 @@ const Portfolio = () => {
                     <p className={styles.description}>{item.description}</p>
 
                     <div className={styles.technologies}>
-                      <h3>Tecnologias Ultilizadas:</h3>
+                      <h3>Tecnologias Abilidades:</h3>
                       <ul>
-                        {item.technologies && item.technologies.map((tech, index) => (
-                          <li key={index}>{tech}</li>
-                        ))}
+                        {item.technologies &&
+                          item.technologies.map((tech, index) => (
+                            <li key={index}>{tech}</li>
+                          ))}
                       </ul>
                     </div>
 
                     <div className={styles.links}>
                       <NavLink
-                        to={item.linkDeploy || ""}
+                        to={item.linkDeploy || ''}
                         className={styles.link}
                       >
                         Deploy
                       </NavLink>
 
                       <NavLink
-                        to={item.linkRepository || ""}
+                        to={item.linkRepository || ''}
                         className={styles.link}
                       >
                         Saiba Mais
@@ -158,8 +137,7 @@ const Portfolio = () => {
         </section>
       )}
     </Transition>
-  );
-};
+  )
+}
 
-export default Portfolio;
-
+export default Equipe
