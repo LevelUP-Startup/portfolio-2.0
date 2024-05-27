@@ -24,6 +24,7 @@
 .links_list {
     display: flex;
     list-style: none;
+    margin-left: 200px;
 }
 
 .links_list a {

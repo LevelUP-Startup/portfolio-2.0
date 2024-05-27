@@ -2,16 +2,19 @@
 import './Portfolio.css'
 import styles from './Portfolio.module.css'
 // HOOKS
-import { useState, useEffect, useRef } from 'react'
-// REACT ROUTER DOM
-import { NavLink } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 // COMPONENT
 import Transition from '../../components/Transition'
 // SWIPER
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCoverflow } from 'swiper/modules'
 // IMGAGENS
-import NayImg from '../../../public/imgs/nay.jpeg'
+import NayImg from '../../../public/imgs/nay.png'
+import LordImg from '../../../public/imgs/lord.png'
+import NandraImg from '../../../public/imgs/nandra.png'
+import AndreImg from '../../../public/imgs/andre.png'
+import MatheusImg from '../../../public/imgs/matheus.png'
+import LucasImg from '../../../public/imgs/lucas.png'
 
 const Equipe = () => {
   const [slidePerview, setSlidePerview] = useState<number>(3)
@@ -22,27 +25,80 @@ const Equipe = () => {
     {
       id: 0,
       image: NayImg,
-      name: 'Nay',
-      description: 'Colocar a descricao aki',
-      technologies: ['Adminstração', 'programacão', 'Direito'],
+      name: 'Nayara Candançan Leite',
+      description: '202108380792@alunos.estacio.br',
+      technologies: [
+        'Gestão de empreendedorismo',
+        'inovação ',
+        'Garantia de qualidade de software',
+        'Neurociência',
+        'Programação neurolinguística',
+      ],
       linkDeploy: '#',
       linkRepository: '#',
     },
     {
-      id: 0,
-      image: NayImg,
-      name: 'Nay',
-      description: 'Colocar a descricao aki',
-      technologies: ['Adminstração', 'programacão', 'Direito'],
+      id: 1,
+      image: LordImg,
+      name: 'Rodrigo de Godoy Domingues',
+      description: '202306270756@alunos.estacio.br',
+      technologies: [
+        'Design',
+        'Desenvolvimento de Jogos',
+        'Jornalismo',
+        'Engenheiro de Sistemas',
+        'Engenheiro de Software',
+      ],
       linkDeploy: '#',
       linkRepository: '#',
     },
     {
-      id: 0,
-      image: NayImg,
-      name: 'Nay',
-      description: 'Colocar a descricao aki',
-      technologies: ['Adminstração', 'programacão', 'Direito'],
+      id: 2,
+      image: NandraImg,
+      name: 'Nandra Silveira da Silva',
+      description: '202404000818@alunos.estacio.br',
+      technologies: [
+        'Administração e marketing',
+        'Inteligência artificial ',
+        'Programação',
+      ],
+      linkDeploy: '#',
+      linkRepository: '#',
+    },
+    {
+      id: 3,
+      image: AndreImg,
+      name: 'André Luiz Ferreira de Souza',
+      description: '202208604943@alunos.estacio.br',
+      technologies: [
+        'Desenvolvedor FullStack',
+        'Software Developer',
+        'Empreendedor',
+        'Developer mobile',
+        'Técnico Especializado em Veículos',
+      ],
+      linkDeploy: '#',
+      linkRepository: '#',
+    },
+    {
+      id: 4,
+      image: MatheusImg,
+      name: 'Matheus André Palmieri',
+      description: '202305179771@alunos.estacio.br',
+      technologies: ['Full Stack', 'Tech Lead', 'Engenheiro de Software'],
+      linkDeploy: '#',
+      linkRepository: '#',
+    },
+    {
+      id: 5,
+      image: LucasImg,
+      name: 'Lucas Santos da Anunciação',
+      description: '202401689882@alunos.estacio.br',
+      technologies: [
+        'Programação',
+        'Desenvolvimento de Games',
+        'Cybersegurança',
+      ],
       linkDeploy: '#',
       linkRepository: '#',
     },
@@ -71,7 +127,7 @@ const Equipe = () => {
       {transitionCompleted && (
         <section className={styles.portfolio}>
           <h2 className={styles.heading}>
-            <span>//</span> Equipe <span>Level UP</span>
+            <span>{`//`}</span> Equipe <span>Level UP</span>
           </h2>
 
           <Swiper
@@ -105,29 +161,13 @@ const Equipe = () => {
                     <p className={styles.description}>{item.description}</p>
 
                     <div className={styles.technologies}>
-                      <h3>Tecnologias Abilidades:</h3>
+                      <h3>Tecnologias Habilidades:</h3>
                       <ul>
                         {item.technologies &&
                           item.technologies.map((tech, index) => (
                             <li key={index}>{tech}</li>
                           ))}
                       </ul>
-                    </div>
-
-                    <div className={styles.links}>
-                      <NavLink
-                        to={item.linkDeploy || ''}
-                        className={styles.link}
-                      >
-                        Deploy
-                      </NavLink>
-
-                      <NavLink
-                        to={item.linkRepository || ''}
-                        className={styles.link}
-                      >
-                        Saiba Mais
-                      </NavLink>
                     </div>
                   </div>
                 </div>

@@ -45,7 +45,9 @@ const item = {
 const About = () => {
   return (
     <Transition onAnimationComplete={() => {}}>
-      <section className={styles.about}>
+      <section className={[styles.about, styles.container].join(' ')}>
+        
+        
         <div className={styles.container_img_skills}>
           <motion.div
             initial={{ opacity: 0, y: '80%' }}
@@ -70,7 +72,7 @@ const About = () => {
               }}
             >
               <h3>
-                <span>//</span> Skills <span>&</span> Tolls
+                <span>{`//`}</span> Skills <span>&</span> Tolls
               </h3>
             </motion.div>
 
@@ -155,19 +157,16 @@ const About = () => {
             }}
           >
             <h2>
-              <span>//</span> Quem é <span>André Luiz</span>
+              <span> // </span> O que é a <span>Level Up</span>
             </h2>
 
             <p>
-              - Olá! Eu sou o André Luíz, um apaixonado por programação e
-              desenvolvimento de soluções inovadoras. Com habilidades sólidas em
-              JavaScript, TypeScript, ReactJS, React Native, NextJS e NodeJS,
-              tenho experiência FullStack e utilizo metodologias ágeis como
-              Scrum e Kanban. Ao longo da minha carreira, aprimorei meu
-              conhecimento em Css-in-JS (Stitches, Styled-Components) e adquiri
-              familiaridade com tecnologias como REST, SOLID, arquitetura MVC,
-              Docker, MonoRepo e TurboRepo. Além disso, possuo noções de Python,
-              Java, TDD e BDD.
+              - Na nossa plataforma, acreditamos no poder transformador da
+              educação para capacitar jovens e impulsioná-los em direção a
+              carreiras promissoras. Nosso objetivo é ser a plataforma líder em
+              educação gamificada, conectando jovens com oportunidades de
+              trabalho significativas e revolucionando o futuro do aprendizado
+              profissional.
             </p>
           </motion.div>
         </div>

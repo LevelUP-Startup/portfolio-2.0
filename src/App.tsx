@@ -8,11 +8,11 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import Contact from './pages/Contact/Contact'
-import Equipe from './pages/Portfolio/Portfolio'
 // CONTEXT
 import { ThemeProvider } from './context/ThemeContext'
 // FRAMER MOTION
 import { AnimatePresence } from 'framer-motion'
+import Equipe from './pages/Equipe/Equipe'
 
 function App() {
   const location = useLocation()

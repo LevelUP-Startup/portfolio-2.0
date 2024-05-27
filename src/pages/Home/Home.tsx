@@ -15,10 +15,24 @@ import {
 import HomeImg from '../../../public/imgs/levelUpLogo.png'
 // FRAMER MOTION
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 
 const Home = () => {
+  const [soundClick] = useState<boolean>(false)
+
+  const handleAudioButtonClick = () => {
+    const audio = new Audio('/sounds/button_click.mp3')
+
+    if (soundClick) {
+      audio.pause()
+    } else {
+      audio.play()
+    }
+  }
+
   return (
     <>
+    
       <Transition onAnimationComplete={() => {}}>
         <section className={styles.home}>
           <div className={styles.home_content}>
@@ -127,8 +141,15 @@ const Home = () => {
             </div>
 
             <div className={styles.btn_box}>
-              <a href="#" download className={styles.btn}>
-                Download CV
+              <a
+                href="pdf/Plano-de-negócio.pdf"
+                download
+                className={styles.btn}
+                onClick={() => {
+                  handleAudioButtonClick()
+                }}
+              >
+                Plano de Negócio
               </a>
             </div>
           </div>

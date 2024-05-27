@@ -1,5 +1,5 @@
 // HOOKS
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { useResponsiveNavbar } from '../hooks/useResponsiveNavbar'
 // REACT ROUTER DOM
 import { NavLink } from 'react-router-dom'
@@ -14,72 +14,16 @@ const Navbar = () => {
   const [lightMode, setLightMode] = useState<boolean>(false)
   const [paletteOpen, setPaletteOpen] = useState<boolean>(false)
   const [selectedColor, setSelectedColor] = useState<string | null>(null)
-  const [paletteInputInvisible, setPaletteInputInvisible] =
-    useState<boolean>(false)
-  const [soundClick, setSoundClick] = useState<boolean>(false)
+  const [soundClick] = useState<boolean>(false)
 
   const { mainColor, setMainColor } = useTheme()
 
   const { handleClickButton, handleLinkClick, showMenu } = useResponsiveNavbar()
 
-  const handleToggleLightMode = () => {
-    setLightMode(!lightMode)
-    setPaletteInputInvisible(!lightMode)
-  }
 
-  useEffect(() => {
-    if (lightMode) {
-      document.body.classList.add('light_mode')
-      setMainColor('#dc2626')
-    } else {
-      document.body.classList.remove('light_mode')
-      setMainColor('#0ef')
-      setTimeout(() => {
-        document.body.style.transition = 'background-color 1.5s, color 1.5s'
-      }, 1500)
-    }
-  }, [lightMode])
-
-  const handlePaletteToggle = () => {
-    setPaletteOpen(!paletteOpen)
-  }
-
-  const handleColorSelection = (color: string) => {
-    setSelectedColor(color)
-  }
-
-  useEffect(() => {
-    if (selectedColor === 'ball_0') {
-      document.documentElement.style.setProperty('--main_color', '#ffb703')
-      setMainColor('#ffb703')
-    } else if (selectedColor === 'ball_2') {
-      document.documentElement.style.setProperty('--main_color', '#3a86ff')
-      setMainColor('#3a86ff')
-    } else if (selectedColor === 'ball_1') {
-      document.documentElement.style.setProperty('--text_color', '#8ecae6')
-      setMainColor(mainColor)
-    } else if (selectedColor === 'ball_3') {
-      document.documentElement.style.setProperty('--text_color', '#eb5e28')
-      setMainColor(mainColor)
-    } else if (selectedColor === 'ball_4') {
-      document.documentElement.style.setProperty('--main_color', '#0ef')
-      document.documentElement.style.setProperty('--text_color', '#fff')
-      setMainColor('#0ef')
-    }
-  }, [selectedColor])
 
   const handleAudioDoubleClick = () => {
     const audio = new Audio('/sounds/double_click.mp3')
-
-    if (soundClick) {
-      audio.pause()
-    } else {
-      audio.play()
-    }
-  }
-
-  const handleAudioButtonClick = () => {
-    const audio = new Audio('/sounds/button_click.mp3')
 
     if (soundClick) {
       audio.pause()
@@ -143,7 +87,7 @@ const Navbar = () => {
               to="/equipe"
               className={({ isActive }) => (isActive ? styles.active : '')}
             >
-              Projetos
+              Equipe
             </NavLink>
           </li>
 
@@ -167,7 +111,7 @@ const Navbar = () => {
       </nav>
 
       <div className={styles.icons_container} id="container">
-        <label>
+        {/* <label>
           <input
             type="checkbox"
             className={styles.input_darc_light_mode}
@@ -227,7 +171,7 @@ const Navbar = () => {
               onClick={() => handleColorSelection('ball_4')}
             ></button>
           </div>
-        </label>
+        </label> */}
 
         <button
           onClick={() => {
