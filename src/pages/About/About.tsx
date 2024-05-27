@@ -46,8 +46,17 @@ const About = () => {
   return (
     <Transition onAnimationComplete={() => {}}>
       <section className={[styles.about, styles.container].join(' ')}>
-        
-        
+        <video
+          className="video_background"
+          autoPlay
+          muted
+          loop
+          id="background-video"
+        >
+          <source src="video/bg-dragom.mp4" type="video/mp4" />
+          Seu navegador não suporta o vídeo de fundo.
+        </video>
+
         <div className={styles.container_img_skills}>
           <motion.div
             initial={{ opacity: 0, y: '80%' }}
