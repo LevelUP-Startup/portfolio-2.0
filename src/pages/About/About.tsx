@@ -70,7 +70,7 @@ const About = () => {
             <img className={styles.about_img} src={AboutImg} alt="about_img" />
           </motion.div>
 
-          <div className={styles.skills}>
+          {/* <div className={styles.skills}>
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -151,7 +151,7 @@ const About = () => {
                 <BiLogoVisualStudio className={styles.vscode} />
               </motion.div>
             </motion.div>
-          </div>
+          </div> */}
         </div>
 
         <div>

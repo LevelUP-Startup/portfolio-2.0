@@ -111,7 +111,7 @@ const Contact = () => {
         </video>
         <div className={styles.header_container}>
           <h2>
-            <span>//</span> Contate <span>Nos!</span>
+            <span>{`//`}</span> Contate <span>Nos!</span>
           </h2>
 
           <div className={styles.social_media}>
