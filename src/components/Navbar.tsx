@@ -63,7 +63,6 @@ const Navbar = () => {
             </NavLink>
           </li>
 
-
           <li
             onClick={() => {
               handleLinkClick()
@@ -77,10 +76,9 @@ const Navbar = () => {
               to="/missao"
               className={({ isActive }) => (isActive ? styles.active : '')}
             >
-              Missao
+              Propósito
             </NavLink>
           </li>
-
 
           <li
             onClick={() => {
