@@ -98,10 +98,20 @@ const Contact = () => {
 
   return (
     <Transition onAnimationComplete={() => {}}>
-      <section className={styles.contact}>
+      <section className={[styles.contact, styles.container].join(' ')}>
+        <video
+          className={styles.video_background}
+          autoPlay
+          muted
+          loop
+          id="background-video"
+        >
+          <source src="video/dragao.mp4" type="video/mp4" />
+          Seu navegador não suporta o vídeo de fundo.
+        </video>
         <div className={styles.header_container}>
           <h2>
-            <span>//</span> Contate <span>Me!</span>
+            <span>//</span> Contate <span>Nos!</span>
           </h2>
 
           <div className={styles.social_media}>

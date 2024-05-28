@@ -20,11 +20,14 @@
 .logo_span {
     text-shadow: 0 0 1rem var(--main_color);
 }
+.links_nav{
+    
+}
 
 .links_list {
     display: flex;
     list-style: none;
-    margin-left: 200px;
+    margin-left: 250px;
 }
 
 .links_list a {

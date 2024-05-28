@@ -3,7 +3,7 @@ import styles from './About.module.css'
 // COMPONENT
 import Transition from '../../components/Transition'
 // IMGAGENS
-import AboutImg from '../../../public/imgs/levelUpLogo.png'
+import AboutImg from '../../../public/imgs/levelUpLogo2.png'
 // FRAMER MOTION
 import { motion } from 'framer-motion'
 // REACT ICONS
@@ -166,7 +166,7 @@ const About = () => {
             }}
           >
             <h2>
-              <span> // </span> O que é a <span>Level Up</span>
+              <span>{`//`}</span> O que é a <span>Level Up</span>
             </h2>
 
             <p>

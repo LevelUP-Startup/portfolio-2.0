@@ -32,9 +32,18 @@ const Home = () => {
 
   return (
     <>
-    
       <Transition onAnimationComplete={() => {}}>
-        <section className={styles.home}>
+        <section className={[styles.home, styles.container].join(' ')}>
+          <video
+            className="video_background"
+            autoPlay
+            muted
+            loop
+            id="background-video"
+          >
+            <source src="video/videobg.mp4" type="video/mp4" />
+            Seu navegador não suporta o vídeo de fundo.
+          </video>
           <div className={styles.home_content}>
             <h1 className={styles.animate_h1}>Level UP</h1>
 

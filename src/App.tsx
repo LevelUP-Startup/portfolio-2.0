@@ -19,16 +19,6 @@ function App() {
   return (
     <>
       <ThemeProvider>
-        <video
-          className="video_background"
-          autoPlay
-          muted
-          loop
-          id="background-video"
-        >
-          <source src="video/videobg.mp4" type="video/mp4" />
-          Seu navegador não suporta o vídeo de fundo.
-        </video>
         <Navbar />
         <div className="container" id="container">
           <AnimatePresence mode="wait">

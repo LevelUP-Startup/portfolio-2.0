@@ -38,7 +38,7 @@ const Navbar = () => {
         &lt; <span className={styles.logo_span}>Level UP</span>/&gt;
       </NavLink>
 
-      <nav>
+      <nav className={`${styles.links_nav}`}>
         <ul className={`${styles.links_list} ${showMenu ? styles.active : ''}`}>
           <li
             onClick={() => {
