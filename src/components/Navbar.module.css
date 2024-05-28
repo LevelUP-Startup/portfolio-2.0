@@ -236,6 +236,7 @@ label {
     }
     .links_list.active {
         height: 22rem;
+        padding-right:250px
     }
     .links_list li {
         justify-content: center;

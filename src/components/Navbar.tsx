@@ -1,26 +1,15 @@
 // HOOKS
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useResponsiveNavbar } from '../hooks/useResponsiveNavbar'
 // REACT ROUTER DOM
 import { NavLink } from 'react-router-dom'
-// REACT ICONS
-import { FaMoon, FaSun, FaPalette } from 'react-icons/fa6'
 // CSS
 import styles from './Navbar.module.css'
-// CONTEXT
-import { useTheme } from '../context/ThemeContext'
 
 const Navbar = () => {
-  const [lightMode, setLightMode] = useState<boolean>(false)
-  const [paletteOpen, setPaletteOpen] = useState<boolean>(false)
-  const [selectedColor, setSelectedColor] = useState<string | null>(null)
   const [soundClick] = useState<boolean>(false)
 
-  const { mainColor, setMainColor } = useTheme()
-
   const { handleClickButton, handleLinkClick, showMenu } = useResponsiveNavbar()
-
-
 
   const handleAudioDoubleClick = () => {
     const audio = new Audio('/sounds/double_click.mp3')
