@@ -1,16 +1,16 @@
 // CSS
-import styles from './Missao.module.css'
+import styles from "./Missao.module.css";
 // COMPONENT
-import Transition from '../../components/Transition'
+import Transition from "../../components/Transition";
 // IMGAGENS
-import AboutImg from '../../../public/imgs/levelUpLogo2.png'
+import AboutImg from "../../../public/imgs/levelUpLogo2.png";
 // FRAMER MOTION
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
 const Missao = () => {
   return (
     <Transition onAnimationComplete={() => {}}>
-      <section className={[styles.about, styles.container].join(' ')}>
+      <section className={[styles.about, styles.container].join(" ")}>
         <video
           className="video_background"
           autoPlay
@@ -24,8 +24,8 @@ const Missao = () => {
 
         <div className={styles.container_img_skills}>
           <motion.div
-            initial={{ opacity: 0, y: '80%' }}
-            animate={{ opacity: 1, y: '0%' }}
+            initial={{ opacity: 0, y: "80%" }}
+            animate={{ opacity: 1, y: "0%" }}
             transition={{
               duration: 2,
               delay: 0.3,
@@ -135,12 +135,10 @@ const Missao = () => {
             </h2>
 
             <p>
-              - Na nossa plataforma, acreditamos no poder transformador da
-              educação para capacitar jovens e impulsioná-los em direção a
-              carreiras promissoras. Nosso objetivo é ser a plataforma líder em
-              educação gamificada, conectando jovens com oportunidades de
-              trabalho significativas e revolucionando o futuro do aprendizado
-              profissional.
+              - Empoderar jovens, ajudando-os a descobrir e desenvolver seus
+              pontos fortes, para que possam trilhar o melhor caminho rumo aos
+              seus objetivos profissionais. Utilizamos métodos inovadores e
+              interativos para garantir que cada jovem atinja potencial/máximo.
             </p>
           </motion.div>
 
@@ -159,18 +157,18 @@ const Missao = () => {
             </h2>
 
             <p>
-              - Na nossa plataforma, acreditamos no poder transformador da
-              educação para capacitar jovens e impulsioná-los em direção a
-              carreiras promissoras. Nosso objetivo é ser a plataforma líder em
-              educação gamificada, conectando jovens com oportunidades de
-              trabalho significativas e revolucionando o futuro do aprendizado
-              profissional.
+              - Ser a principal referência em educação gamificada, criando um
+              ambiente onde aprender é envolvente, inspirador e diretamente
+              conectado às demandas do mercado de trabalho. Buscamos transformar
+              a forma como o aprendizado profissional e percebido e
+              implementado, preparando os jovens para o futuro com habilidades
+              práticas e relevantes.
             </p>
           </motion.div>
         </div>
       </section>
     </Transition>
-  )
-}
+  );
+};
 
-export default Missao
+export default Missao;
