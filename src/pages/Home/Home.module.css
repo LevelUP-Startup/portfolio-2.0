@@ -289,7 +289,7 @@
 
 @media (max-width: 400px) {
     .home_img {
-        bottom: 10rem;
+        bottom: 0rem;
         right: 1.5rem;
     }
 

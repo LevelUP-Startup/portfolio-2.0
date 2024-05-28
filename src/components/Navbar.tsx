@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <header className={styles.header}>
       <NavLink to={'/'} className={styles.logo}>
-        &lt; <span className={styles.logo_span}>Level UP</span>/&gt;
+        <span className={styles.logo_span}>Level UP</span>
       </NavLink>
 
       <nav className={`${styles.links_nav}`}>
@@ -62,6 +62,25 @@ const Navbar = () => {
               Sobre
             </NavLink>
           </li>
+
+
+          <li
+            onClick={() => {
+              handleLinkClick()
+              handleAudioDoubleClick()
+            }}
+            className={`${styles.active_menu}
+                                    ${showMenu ? styles.animation_menu : ''}`}
+            style={{ ['--i' as string]: 1 }}
+          >
+            <NavLink
+              to="/missao"
+              className={({ isActive }) => (isActive ? styles.active : '')}
+            >
+              Missao
+            </NavLink>
+          </li>
+
 
           <li
             onClick={() => {

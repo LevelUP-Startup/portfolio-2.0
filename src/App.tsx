@@ -13,6 +13,7 @@ import { ThemeProvider } from './context/ThemeContext'
 // FRAMER MOTION
 import { AnimatePresence } from 'framer-motion'
 import Equipe from './pages/Equipe/Equipe'
+import Missao from './pages/Missao/Missao'
 
 function App() {
   const location = useLocation()
@@ -25,6 +26,7 @@ function App() {
             <Routes location={location} key={location.pathname}>
               <Route index element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/missao" element={<Missao />} />
               <Route path="/equipe" element={<Equipe />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>

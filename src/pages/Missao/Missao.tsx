@@ -1,5 +1,5 @@
 // CSS
-import styles from './About.module.css'
+import styles from './Missao.module.css'
 // COMPONENT
 import Transition from '../../components/Transition'
 // IMGAGENS
@@ -7,7 +7,7 @@ import AboutImg from '../../../public/imgs/levelUpLogo2.png'
 // FRAMER MOTION
 import { motion } from 'framer-motion'
 
-const About = () => {
+const Missao = () => {
   return (
     <Transition onAnimationComplete={() => {}}>
       <section className={[styles.about, styles.container].join(' ')}>
@@ -131,7 +131,7 @@ const About = () => {
             }}
           >
             <h2>
-              <span>{`//`}</span> O que é a <span>Level Up</span>
+              <span>{`//`}</span> Missão da <span>Level Up</span>
             </h2>
 
             <p>
@@ -143,10 +143,35 @@ const About = () => {
               profissional.
             </p>
           </motion.div>
+
+          <motion.div
+            className={styles.about_content}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 1,
+              delay: 0.6,
+              ease: [0.2, 0, 0.2, 1],
+            }}
+          >
+            <h2>
+              <span>{`//`}</span> Valores da <span>Level Up</span>
+            </h2>
+
+            <p>
+              - Na nossa plataforma, acreditamos no poder transformador da
+              educação para capacitar jovens e impulsioná-los em direção a
+              carreiras promissoras. Nosso objetivo é ser a plataforma líder em
+              educação gamificada, conectando jovens com oportunidades de
+              trabalho significativas e revolucionando o futuro do aprendizado
+              profissional.
+            </p>
+          </motion.div>
+
         </div>
       </section>
     </Transition>
   )
 }
 
-export default About
+export default Missao
