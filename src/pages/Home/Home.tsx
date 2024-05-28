@@ -71,10 +71,7 @@ const Home = () => {
                   },
                 }}
               >
-                <NavLink
-                  to="https://api.whatsapp.com/send?phone=5562996106990"
-                  className={styles.whatsapp_link}
-                >
+                <NavLink to="#" className={styles.whatsapp_link}>
                   <FaWhatsapp />
                 </NavLink>
               </motion.div>
@@ -94,10 +91,7 @@ const Home = () => {
                   },
                 }}
               >
-                <NavLink
-                  to="https://www.instagram.com/adventureandre/"
-                  className={styles.instagram_link}
-                >
+                <NavLink to="#" className={styles.instagram_link}>
                   <FaInstagram />
                 </NavLink>
               </motion.div>
@@ -117,10 +111,7 @@ const Home = () => {
                   },
                 }}
               >
-                <NavLink
-                  to="https://www.linkedin.com/in/adventureandre"
-                  className={styles.linkedin_link}
-                >
+                <NavLink to="#" className={styles.linkedin_link}>
                   <FaLinkedinIn />
                 </NavLink>
               </motion.div>
@@ -142,6 +133,7 @@ const Home = () => {
               >
                 <NavLink
                   to="https://github.com/LevelUP-Startup"
+                  target="_blank"
                   className={styles.github_link}
                 >
                   <FaGithub />

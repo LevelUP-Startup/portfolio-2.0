@@ -143,6 +143,31 @@ const About = () => {
               profissional.
             </p>
           </motion.div>
+
+          <motion.div
+            className={styles.about_content}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 1,
+              delay: 0.6,
+              ease: [0.2, 0, 0.2, 1],
+            }}
+          >
+            <h2>
+              <span>{`//`}</span> O que é a <span>Level Up</span>
+            </h2>
+
+            <p>
+              - Na nossa plataforma, acreditamos no poder transformador da
+              educação para capacitar jovens e impulsioná-los em direção a
+              carreiras promissoras. Nosso objetivo é ser a plataforma líder em
+              educação gamificada, conectando jovens com oportunidades de
+              trabalho significativas e revolucionando o futuro do aprendizado
+              profissional.
+            </p>
+          </motion.div>
+
         </div>
       </section>
     </Transition>
