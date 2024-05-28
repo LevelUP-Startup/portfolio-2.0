@@ -167,7 +167,6 @@ const Missao = () => {
               profissional.
             </p>
           </motion.div>
-
         </div>
       </section>
     </Transition>

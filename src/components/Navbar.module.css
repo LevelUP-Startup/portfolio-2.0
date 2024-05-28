@@ -235,7 +235,7 @@ label {
         width: 100%;
     }
     .links_list.active {
-        height: 22rem;
+        height: 25rem;
         padding-right:250px
     }
     .links_list li {
