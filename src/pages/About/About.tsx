@@ -16,6 +16,7 @@ const About = () => {
           autoPlay
           muted
           loop
+          playsInline
           id="background-video"
         >
           <source src="video/bg-dragom.mp4" type="video/mp4" />

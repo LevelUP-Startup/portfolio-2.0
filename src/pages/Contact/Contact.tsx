@@ -104,6 +104,7 @@ const Contact = () => {
           autoPlay
           muted
           loop
+          playsInline
           id="background-video"
         >
           <source src="video/dragao.mp4" type="video/mp4" />
@@ -131,10 +132,7 @@ const Contact = () => {
                 },
               }}
             >
-              <NavLink
-                to="https://api.whatsapp.com/send?phone=5562996106990"
-                className={styles.whatsapp_link}
-              >
+              <NavLink to="#" className={styles.whatsapp_link}>
                 <FaWhatsapp />
               </NavLink>
             </motion.div>

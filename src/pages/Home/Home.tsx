@@ -39,6 +39,7 @@ const Home = () => {
             autoPlay
             muted
             loop
+            playsInline
             id="background-video"
           >
             <source src="video/videobg.mp4" type="video/mp4" />
