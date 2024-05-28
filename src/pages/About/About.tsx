@@ -6,41 +6,6 @@ import Transition from '../../components/Transition'
 import AboutImg from '../../../public/imgs/levelUpLogo2.png'
 // FRAMER MOTION
 import { motion } from 'framer-motion'
-// REACT ICONS
-import { FaGitAlt } from 'react-icons/fa6'
-import { GrMysql } from 'react-icons/gr'
-import { SiCanva } from 'react-icons/si'
-import {
-  BiLogoTypescript,
-  BiLogoReact,
-  BiLogoJavascript,
-  BiLogoCss3,
-  BiLogoHtml5,
-  BiLogoFirebase,
-  BiLogoRedux,
-  BiLogoVisualStudio,
-  BiLogoBootstrap,
-} from 'react-icons/bi'
-
-const container = {
-  hidden: { opacity: 1, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      delayChildren: 0.5,
-      staggerChildren: 0.2,
-    },
-  },
-}
-
-const item = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-  },
-}
 
 const About = () => {
   return (

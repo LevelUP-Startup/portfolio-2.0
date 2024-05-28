@@ -1,7 +1,7 @@
 // CSS
 import styles from './Contact.module.css'
 // HOOKS
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 // REACT ROUTER DOM
 import { NavLink } from 'react-router-dom'
 // COMPONENT
@@ -155,10 +155,7 @@ const Contact = () => {
                 },
               }}
             >
-              <NavLink
-                to="https://www.instagram.com/adventureandre/"
-                className={styles.instagram_link}
-              >
+              <NavLink to="#" className={styles.instagram_link}>
                 <FaInstagram />
               </NavLink>
             </motion.div>
@@ -179,10 +176,7 @@ const Contact = () => {
                 },
               }}
             >
-              <NavLink
-                to="https://www.linkedin.com/in/adventureandre"
-                className={styles.linkedin_link}
-              >
+              <NavLink to="#" className={styles.linkedin_link}>
                 <FaLinkedinIn />
               </NavLink>
             </motion.div>
@@ -204,7 +198,7 @@ const Contact = () => {
               }}
             >
               <NavLink
-                to="https://github.com/adventureandre"
+                to="https://github.com/LevelUP-Startup"
                 className={styles.github_link}
               >
                 <FaGithub />
