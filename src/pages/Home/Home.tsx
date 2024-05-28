@@ -47,10 +47,6 @@ const Home = () => {
           </video>
           <div className={styles.home_content}>
             <h1 className={styles.animate_h1}>Level UP</h1>
-
-            {/* <div className={styles.transparent_text}>
-                            <h3 className={styles.animation_text}>DESVENDE A MASMORRA</h3>
-                        </div> */}
             <h3 className={styles.first_h3}>DESVENDE A MASMORRA</h3>
             <h3 className={styles.first_h3}>
               DO MERCADO DE <span>TRABALHO</span>
@@ -72,7 +68,11 @@ const Home = () => {
                   },
                 }}
               >
-                <NavLink to="#" className={styles.instagram_link}>
+                <NavLink
+                  to="https://www.instagram.com/insights_level_up?igsh=YnFjdGF5dGZlYWhp"
+                  target="_blank"
+                  className={styles.instagram_link}
+                >
                   <FaInstagram />
                 </NavLink>
               </motion.div>

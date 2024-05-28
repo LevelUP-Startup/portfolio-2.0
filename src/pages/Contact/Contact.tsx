@@ -132,7 +132,11 @@ const Contact = () => {
                 },
               }}
             >
-              <NavLink to="#" className={styles.instagram_link}>
+              <NavLink
+                to="https://www.instagram.com/insights_level_up?igsh=YnFjdGF5dGZlYWhp"
+                target="_blank"
+                className={styles.instagram_link}
+              >
                 <FaInstagram />
               </NavLink>
             </motion.div>
@@ -155,6 +159,7 @@ const Contact = () => {
             >
               <NavLink
                 to="https://github.com/LevelUP-Startup"
+                target="_blank"
                 className={styles.github_link}
               >
                 <FaGithub />
